@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="34sp"
+        android:text="Score : 999"
+        android:id="@+id/scoreText"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:textSize="26sp"
+        android:text="Round :"
+        android:id="@+id/roundText"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scoreText"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:textSize="26sp"
+        android:text="Throw :999"
+        android:id="@+id/throwText"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scoreText"
+        android:layout_marginRight="10dp"/>
+
+
+    <ImageButton
+        android:id="@+id/dice1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/white1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/roundText" >
+    </ImageButton>
+
+
+    <ImageButton
+        android:id="@+id/dice2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/white1"
+        app:layout_constraintLeft_toRightOf="@+id/dice1"
+        app:layout_constraintTop_toBottomOf="@+id/roundText" >
+
+    </ImageButton>
+
+    <ImageButton
+        android:id="@+id/dice3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/white1"
+        app:layout_constraintLeft_toRightOf="@+id/dice2"
+        app:layout_constraintTop_toBottomOf="@+id/roundText" >
+
+    </ImageButton>
+
+    <ImageButton
+        android:id="@+id/dice4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/white1"
+        app:layout_constraintLeft_toRightOf="@+id/dice3"
+        app:layout_constraintTop_toBottomOf="@+id/roundText" >
+
+    </ImageButton>
+
+    <ImageButton
+        android:id="@+id/dice5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/white1"
+        app:layout_constraintLeft_toRightOf="@+id/dice4"
+        app:layout_constraintTop_toBottomOf="@+id/roundText" >
+
+    </ImageButton>
+
+    <ImageButton
+        android:id="@+id/dice6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/white1"
+        app:layout_constraintLeft_toRightOf="@+id/dice5"
+        app:layout_constraintTop_toBottomOf="@+id/roundText" >
+
+    </ImageButton>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="3"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    android:orientation="horizontal">
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:entries="@array/point_option"
+        android:layout_weight="2"
+        android:layout_margin="10dp"/>
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="THROW"
+        android:layout_weight="1"
+        android:layout_margin="10dp">
+    </Button>
+
+</LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
